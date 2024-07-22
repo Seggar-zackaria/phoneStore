@@ -1,0 +1,25 @@
+# Block specific pages for all user-agents
+User-agent: *
+Disallow: /store-terms-condition.html
+Disallow: /store-privacy-policy.html
+Disallow: /admin/src/
+# Disallow: /admin/src/indedx.html
+# Disallow: /admin/src/Appointment.html
+# Disallow: /admin/src/Dashboard.html
+# Disallow: /admin/src/index.html
+# Disallow: /admin/src/Settings.General.html
+# Disallow: /admin/src/Settings.html
+
+
+# Block specific pages for Googlebot
+# User-agent: Googlebot
+# Disallow: /store-terms-condition.html
+# Disallow: /store-privacy-policy.html
+# Disallow: /admin/src/
+
+# Block specific pages for Bingbot
+# User-agent: Bingbot
+# Disallow: /admin/src/
+
+
+Sitemap: http://example.com/sitemap.xml

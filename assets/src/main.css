@@ -53,7 +53,7 @@
 
 @layer components {
   .card {
-    --background-checkbox: #ff00d4;
+    --background-checkbox: #86198f;
     --text-headline: #000;
     --card-height: 190px;
     --card-width: 190px;
@@ -72,6 +72,11 @@
     overflow: hidden;
     padding: var(--card-padding);
     border-radius: var(--card-radius);
+  }
+
+  .card:hover {
+    background-color: #f1f5f9;
+    border: 1px solid #aeafaf;
   }
 
   .card__input {

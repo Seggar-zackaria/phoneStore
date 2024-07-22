@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const customerForm = document.getElementById("customer-details-form");
 
-  const swissPhoneRegex = /^\+41[1-9][0-9]{8}$/;
+  // const swissPhoneRegex = /^\+41[1-9][0-9]{8}$/;
+  const swissPhoneRegex = /^[1-9]/;
   const emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$/;
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function validateInput(input, regex) {
     const errorElement = input.nextElementSibling;
     if (!regex.test(input.value.trim())) {
-      errorElement.innerHTML = "Invalid input.";
+      errorElement.innerHTML = "Entrée invalide.";
       input.classList.remove("valid-input");
       input.classList.add("invalid-input");
     } else {

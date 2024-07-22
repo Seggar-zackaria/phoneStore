@@ -690,7 +690,7 @@ html {
 }
 
 .card {
-  --background-checkbox: #ff00d4;
+  --background-checkbox: #86198f;
   --text-headline: #000;
   --card-height: 190px;
   --card-width: 190px;
@@ -709,6 +709,11 @@ html {
   overflow: hidden;
   padding: var(--card-padding);
   border-radius: var(--card-radius);
+}
+
+.card:hover {
+  background-color: #f1f5f9;
+  border: 1px solid #aeafaf;
 }
 
 .card__input {
@@ -985,12 +990,8 @@ html {
   grid-row-start: 2;
 }
 
-.row-start-3 {
-  grid-row-start: 3;
-}
-
-.row-start-9 {
-  grid-row-start: 9;
+.row-start-4 {
+  grid-row-start: 4;
 }
 
 .row-end-11 {
@@ -1075,6 +1076,10 @@ html {
   margin-top: 0.5rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -1089,10 +1094,6 @@ html {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
 }
 
 .inline-block {
@@ -1141,6 +1142,31 @@ html {
 .size-full {
   width: 100%;
   height: 100%;
+}
+
+.size-3\/4 {
+  width: 75%;
+  height: 75%;
+}
+
+.size-2\/4 {
+  width: 50%;
+  height: 50%;
+}
+
+.size-\[60\%\] {
+  width: 60%;
+  height: 60%;
+}
+
+.size-\[30\%\] {
+  width: 30%;
+  height: 30%;
+}
+
+.size-\[50\%\] {
+  width: 50%;
+  height: 50%;
 }
 
 .h-32 {
@@ -1193,6 +1219,10 @@ html {
   width: 7rem;
 }
 
+.w-56 {
+  width: 14rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -1216,11 +1246,6 @@ html {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.-rotate-45 {
-  --tw-rotate: -45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .-rotate-\[25deg\] {
   --tw-rotate: -25deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1233,11 +1258,6 @@ html {
 
 .rotate-180 {
   --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-\[25deg\] {
-  --tw-rotate: 25deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1660,11 +1680,6 @@ html {
   color: rgb(134 25 143 / var(--tw-text-opacity));
 }
 
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
 .text-neutral-400 {
   --tw-text-opacity: 1;
   color: rgb(163 163 163 / var(--tw-text-opacity));
@@ -1688,6 +1703,11 @@ html {
 .text-stone-400 {
   --tw-text-opacity: 1;
   color: rgb(168 162 158 / var(--tw-text-opacity));
+}
+
+.text-stone-500 {
+  --tw-text-opacity: 1;
+  color: rgb(120 113 108 / var(--tw-text-opacity));
 }
 
 .text-stone-600 {
@@ -2102,12 +2122,20 @@ html {
     grid-column-start: 7;
   }
 
+  .lg\:col-end-9 {
+    grid-column-end: 9;
+  }
+
+  .lg\:col-end-10 {
+    grid-column-end: 10;
+  }
+
   .lg\:row-start-7 {
     grid-row-start: 7;
   }
 
-  .lg\:row-end-5 {
-    grid-row-end: 5;
+  .lg\:row-end-6 {
+    grid-row-end: 6;
   }
 
   .lg\:row-end-auto {
@@ -2135,13 +2163,13 @@ html {
     height: 100%;
   }
 
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
   .lg\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
-  }
-
-  .lg\:w-1\/2 {
-    width: 50%;
   }
 
   .lg\:grid-cols-2 {
@@ -2154,10 +2182,6 @@ html {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-8 {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
   .lg\:justify-end {
@@ -2199,11 +2223,6 @@ html {
 }
 
 @media (min-width: 1280px) {
-  .xl\:my-44 {
-    margin-top: 11rem;
-    margin-bottom: 11rem;
-  }
-
   .xl\:mt-44 {
     margin-top: 11rem;
   }
@@ -2212,9 +2231,9 @@ html {
     display: none;
   }
 
-  .xl\:size-96 {
-    width: 24rem;
-    height: 24rem;
+  .xl\:size-10\/12 {
+    width: 83.333333%;
+    height: 83.333333%;
   }
 
   .xl\:size-\[32rem\] {
@@ -2222,22 +2241,17 @@ html {
     height: 32rem;
   }
 
-  .xl\:size-10\/12 {
-    width: 83.333333%;
-    height: 83.333333%;
-  }
-
   .xl\:h-\[40dvh\] {
     height: 40dvh;
+  }
+
+  .xl\:w-1\/2 {
+    width: 50%;
   }
 
   .xl\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
-  }
-
-  .xl\:w-1\/2 {
-    width: 50%;
   }
 
   .xl\:justify-start {

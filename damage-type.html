@@ -91,7 +91,7 @@
           <button
             class="flex items-center gap-4 px-2 py-1 border-2 rounded-full text-stone-400 border-stone-300 lg:hidden"
           >
-            <span class="text-xs text-stone-400">Menu</span>
+            <span class="text-xs text-stone-500">Menu</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -112,166 +112,241 @@
       </nav>
     </header>
     <!-- navbar ends -->
-    <section class="container mt-16 grid items-start px-4 mx-auto md:h-[80dvh]">
+    <section class="container grid items-start px-4 mx-auto mt-16">
       <div class="self-end mx-auto mb-12 space-y-8 text-center">
         <h1 class="text-2xl font-bold md:text-4xl">
           Quel est le Probleme de votre appareil ?
         </h1>
-        <p class="mt-2 text-neutral-400">
+        <p class="mx-auto mt-2 text-neutral-500 lg:w-1/2">
           Nous proposons une large gamme de services de réparation pour
           smartphones de toutes marques, notamment la réparation d'écrans, de
           batteries, de connecteurs de charge, de caméras, et bien plus encore
         </p>
       </div>
-      <form
-        action=""
-        method=""
-        class="grid items-center grid-cols-2 gap-4 mt-6 mb-8 sm:grid-cols-3 md:grid-cols-4"
-      >
-        <label class="card">
-          <input class="card__input" value="camera" type="checkbox" />
-          <div class="card__body">
-            <div class="card__body-cover">
-              <img
-                class="card__body-cover-image"
-                src="./assets/images/phoneProbleme/camera.svg"
-              /><span class="card__body-cover-checkbox">
-                <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg
-              ></span>
-            </div>
-            <header class="card__body-header">
-              <h2 class="card__body-header-title">camera</h2>
-            </header>
-          </div>
-        </label>
-        <label class="card">
-          <input class="card__input" value="camera" type="checkbox" />
-          <div class="card__body">
-            <div class="card__body-cover">
-              <img
-                class="card__body-cover-image"
-                src="./assets/images/phoneProbleme/cracked-screen.svg"
-              /><span class="card__body-cover-checkbox">
-                <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg
-              ></span>
-            </div>
-            <header class="card__body-header">
-              <h2 class="card__body-header-title">camera</h2>
-            </header>
-          </div>
-        </label>
-        <label class="card">
-          <input class="card__input" value="camera" type="checkbox" />
-          <div class="card__body">
-            <div class="card__body-cover">
-              <img
-                class="card__body-cover-image"
-                src="./assets/images/phoneProbleme/back-housing.svg"
-              /><span class="card__body-cover-checkbox">
-                <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg
-              ></span>
-            </div>
-            <header class="card__body-header">
-              <h2 class="card__body-header-title">camera</h2>
-            </header>
-          </div>
-        </label>
-        <label class="card">
-          <input class="card__input" value="camera" type="checkbox" />
-          <div class="card__body">
-            <div class="card__body-cover">
-              <img
-                class="card__body-cover-image"
-                src="./assets/images/phoneProbleme/water-damage.svg"
-              /><span class="card__body-cover-checkbox">
-                <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg
-              ></span>
-            </div>
-            <header class="card__body-header">
-              <h2 class="card__body-header-title">camera</h2>
-            </header>
-          </div>
-        </label>
-        <label class="card">
-          <input class="card__input" value="camera" type="checkbox" />
-          <div class="card__body">
-            <div class="card__body-cover">
-              <img
-                class="card__body-cover-image"
-                src="./assets/images/phoneProbleme/wont-charge.svg"
-              /><span class="card__body-cover-checkbox">
-                <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg
-              ></span>
-            </div>
-            <header class="card__body-header">
-              <h2 class="card__body-header-title">camera</h2>
-            </header>
-          </div>
-        </label>
-        <label class="card">
-          <input class="card__input" value="camera" type="checkbox" />
-          <div class="card__body">
-            <div class="card__body-cover">
-              <img
-                class="card__body-cover-image"
-                src="./assets/images/phoneProbleme/short-battery-life.svg"
-              /><span class="card__body-cover-checkbox">
-                <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg
-              ></span>
-            </div>
-            <header class="card__body-header">
-              <h2 class="card__body-header-title">camera</h2>
-            </header>
-          </div>
-        </label>
-      </form>
 
-      <div
-        class="grid items-center w-full mb-7 md:justify-items-center md:grid-cols-2"
-      >
-        <a href="./device-details.html" class="order-2 mt-8 md:order-none">
-          <button class="btn md:w-fit md:mx-auto">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="rotate-180"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+      <div>
+        <div
+          class="grid items-center grid-cols-2 gap-4 mt-6 mb-8 sm:grid-cols-3 md:grid-cols-4"
+        >
+          <label
+            class="card"
+            tabindex="1"
+            aria-label="Sélectionnez un problème de caméra"
+          >
+            <input class="card__input" value="camera" type="checkbox" />
+            <div class="card__body">
+              <div class="card__body-cover">
+                <img
+                  class="card__body-cover-image"
+                  src="./assets/images/phoneProbleme/camera.svg"
+                  alt="Icône de problème de caméra"
+                />
+                <span class="card__body-cover-checkbox">
+                  <svg
+                    class="card__body-cover-checkbox--svg"
+                    viewBox="0 0 12 10"
+                    aria-hidden="true"
+                  >
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <header class="card__body-header">
+                <h2 class="card__body-header-title">Caméra</h2>
+              </header>
+            </div>
+          </label>
+          <label
+            class="card"
+            tabindex="2"
+            aria-label="Sélectionnez un écran cassé"
+          >
+            <input class="card__input" value="cracked-screen" type="checkbox" />
+            <div class="card__body">
+              <div class="card__body-cover">
+                <img
+                  class="card__body-cover-image"
+                  src="./assets/images/phoneProbleme/cracked-screen.svg"
+                  alt="Icône d'écran cassé"
+                />
+                <span class="card__body-cover-checkbox">
+                  <svg
+                    class="card__body-cover-checkbox--svg"
+                    viewBox="0 0 12 10"
+                    aria-hidden="true"
+                  >
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <header class="card__body-header">
+                <h2 class="card__body-header-title">Écran cassé</h2>
+              </header>
+            </div>
+          </label>
+          <label
+            class="card"
+            tabindex="3"
+            aria-label="Sélectionnez une vitre arrière cassée"
+          >
+            <input class="card__input" value="back-glass" type="checkbox" />
+            <div class="card__body">
+              <div class="card__body-cover">
+                <img
+                  class="card__body-cover-image"
+                  src="./assets/images/phoneProbleme/back-housing.svg"
+                  alt="Icône de vitre arrière cassée"
+                />
+                <span class="card__body-cover-checkbox">
+                  <svg
+                    class="card__body-cover-checkbox--svg"
+                    viewBox="0 0 12 10"
+                    aria-hidden="true"
+                  >
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <header class="card__body-header">
+                <h2 class="card__body-header-title">Vitre arrière cassée</h2>
+              </header>
+            </div>
+          </label>
+          <label
+            class="card"
+            tabindex="4"
+            aria-label="Sélectionnez un dommage causé par l'eau"
+          >
+            <input class="card__input" value="water-damage" type="checkbox" />
+            <div class="card__body">
+              <div class="card__body-cover">
+                <img
+                  class="card__body-cover-image"
+                  src="./assets/images/phoneProbleme/water-damage.svg"
+                  alt="Icône de dommage causé par l'eau"
+                />
+                <span class="card__body-cover-checkbox">
+                  <svg
+                    class="card__body-cover-checkbox--svg"
+                    viewBox="0 0 12 10"
+                    aria-hidden="true"
+                  >
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <header class="card__body-header">
+                <h2 class="card__body-header-title">Dommage par l'eau</h2>
+              </header>
+            </div>
+          </label>
+          <label
+            class="card"
+            tabindex="5"
+            aria-label="Sélectionnez un problème de chargeur"
+          >
+            <input class="card__input" value="charger" type="checkbox" />
+            <div class="card__body">
+              <div class="card__body-cover">
+                <img
+                  class="card__body-cover-image"
+                  src="./assets/images/phoneProbleme/wont-charge.svg"
+                  alt="Icône de problème de chargeur"
+                />
+                <span class="card__body-cover-checkbox">
+                  <svg
+                    class="card__body-cover-checkbox--svg"
+                    viewBox="0 0 12 10"
+                    aria-hidden="true"
+                  >
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <header class="card__body-header">
+                <h2 class="card__body-header-title">Chargeur</h2>
+              </header>
+            </div>
+          </label>
+          <label
+            class="card"
+            tabindex="6"
+            aria-label="Sélectionnez un problème de batterie"
+          >
+            <input class="card__input" value="battery" type="checkbox" />
+            <div class="card__body">
+              <div class="card__body-cover">
+                <img
+                  class="card__body-cover-image"
+                  src="./assets/images/phoneProbleme/short-battery-life.svg"
+                  alt="Icône de problème de batterie"
+                />
+                <span class="card__body-cover-checkbox">
+                  <svg
+                    class="card__body-cover-checkbox--svg"
+                    viewBox="0 0 12 10"
+                    aria-hidden="true"
+                  >
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <header class="card__body-header">
+                <h2 class="card__body-header-title">Batterie</h2>
+              </header>
+            </div>
+          </label>
+        </div>
+        <div
+          class="grid items-center w-full mb-7 md:justify-items-center md:grid-cols-2"
+        >
+          <a href="./device-details.html" class="order-2 mt-8 md:order-none">
+            <button
+              tabindex="7"
+              class="btn md:w-fit md:mx-auto"
+              aria-label="revenir a la page pour choissir votre l'appareil"
             >
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-            <span> previous </span>
-          </button>
-        </a>
-        <a href="./customer-details.html" class="mt-8">
-          <button class="btn">
-            <span> continuer </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="rotate-180"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+              <span> Précédent </span>
+            </button>
+          </a>
+          <a href="./customer-details.html" class="mt-8">
+            <button
+              tabindex="8"
+              class="btn"
+              aria-label="Aller à l'étape suivante"
             >
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-          </button>
-        </a>
+              <span> Continuer </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </a>
+        </div>
       </div>
     </section>
     <!-- footer starts -->
@@ -292,11 +367,14 @@
         <span class="sr-only">phonelabstore logo</span>
       </div>
       <div class="space-x-3">
-        <button type="submit">
-          <a href=""
-            ><svg
+        <a
+          href="https://www.facebook.com"
+          aria-label="Suivez-nous sur Facebook"
+        >
+          <button type="button" aria-label="Suivez-nous sur Facebook">
+            <svg
               class="text-blue-700 size-6"
-              title="suiver nous sur facebook"
+              title="Suivez-nous sur Facebook"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
               role="img"
@@ -306,14 +384,14 @@
                 d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
               />
             </svg>
-          </a>
-        </button>
-        <button>
-          <a href="">
+          </button>
+        </a>
+        <a href="https://www.tiktok.com" aria-label="Suivez-nous sur TikTok">
+          <button type="button" aria-label="Suivez-nous sur TikTok">
             <svg
               class="text-blue-700 size-6"
               aria-hidden="true"
-              title="suiver nous sur tiktok"
+              title="Suivez-nous sur TikTok"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -322,38 +400,46 @@
                 d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"
               />
             </svg>
-          </a>
-        </button>
-        <button>
-          <a href=""
-            ><svg
+          </button>
+        </a>
+        <a
+          href="https://www.whatsapp.com"
+          aria-label="Contactez-nous sur WhatsApp"
+        >
+          <button type="button" aria-label="Contactez-nous sur WhatsApp">
+            <svg
               class="text-blue-700 size-6"
               aria-hidden="true"
-              title="contacter nous sur whatsapp"
+              title="Contactez-nous sur WhatsApp"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
             >
               <path
                 d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
-              /></svg
-          ></a>
-        </button>
-        <button>
-          <a href=""
-            ><svg
+              />
+            </svg>
+          </button>
+        </a>
+        <a
+          href="https://www.instagram.com"
+          aria-label="Suivez-nous sur Instagram"
+        >
+          <button type="button" aria-label="Suivez-nous sur Instagram">
+            <svg
               aria-hidden="true"
               role="img"
-              title="suiver nous sur instagram"
+              title="Suivez-nous sur Instagram"
               class="text-blue-700 size-6"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
             >
               <path
                 d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-              /></svg
-          ></a>
-        </button>
+              />
+            </svg>
+          </button>
+        </a>
       </div>
     </footer>
 
