@@ -205,8 +205,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mainContainer.addEventListener("mouseleave", () => {
     images.forEach((image) => {
-      image.style.transform = "translate(-45, 0)";
+      image.style.transform = "translate(0, 0)";
       image.style.transition = "all 1s";
     });
   });
 });
+
+const counters = document.querySelectorAll(".counters span");
+const container = document.querySelector(".counters");
+
+let activated = false;
+
+function animateCounters() {
+  counters.forEach((counter) => {
+    counter.innerHTML = 0;
+
+    let count = 0;
+
+    function updateCount() {
+      const target = parseInt(counter.dataset.count.replace(/,/g, ""));
+      const increment = Math.ceil(target / 200);
+
+      if (count < target) {
+        count += increment;
+        counter.innerHTML = count.toLocaleString();
+        setTimeout(updateCount, 10);
+      } else {
+        counter.innerText = target.toLocaleString();
+      }
+    }
+
+    updateCount();
+  });
+  activated = true;
+}
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !activated) {
+        animateCounters();
+      } else if (!entry.isIntersecting && activated) {
+        counters.forEach((counter) => {
+          counter.innerText = 0;
+        });
+        activated = false;
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
+
+observer.observe(container);

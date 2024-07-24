@@ -122,21 +122,21 @@
 
     <!-- landing page starts -->
     <main
-      class="container grid-wrapper px-4 items-center h-[90dvh] 2xl:h-[60dvh] mx-auto"
+      class="container grid-wrapper gap-x-12 xl:mt-48 px-4 items-center h-[90dvh] 2xl:h-[60dvh] mx-auto"
       id="main-container"
     >
       <div
         class="self-start w-full h-32 col-start-1 col-end-13 row-start-2 md:hidden bg-gradient-to-r from-fuchsia-500 to-rose-500 rounded-xl"
       ></div>
       <div
-        class="col-start-1 col-end-12 md:col-start-1 grid-cols-subgrid md:col-end-7 row-span-full"
+        class="col-start-1 col-end-12 mt-9 md:mt-0 md:col-start-1 grid-cols-subgrid md:col-end-7 row-span-full"
       >
         <h1
           class="col-span-8 font-semibold mb-8 text-4xl uppercase md:text-[2.75rem] md:leading-snug lg:text-6xl"
         >
           On répare TOUT <br />pour vous
         </h1>
-        <p class="text-neutral-500 lg:text-xl !leading-normal">
+        <p class="text-neutral-500 lg:text-xl !leading-normal xl:w-9/12">
           Smartphone ou tablette, notre équipe prend en charge toutes les pannes
           de vos appareils et intervient avec nos ateliers mobiles à l’endroit
           de votre choix.
@@ -207,7 +207,7 @@
       </div>
 
       <img
-        class="hidden col-end-12 md:row-start-6 row-end-11 md:col-start-10 md:block -rotate-[25deg] follow-mouse"
+        class="hidden xl:self-start col-end-12 md:row-start-6 xl:row-start-7 row-end-11 md:col-start-10 xl:w-[13rem] xl:col-start-9 md:block follow-mouse"
         src="./assets/images/landing-page/apple-watch.webp"
         alt="apple-watch"
         loading="lazy"
@@ -219,13 +219,13 @@
         loading="lazy"
       />
       <img
-        class="z-10 hidden object-cover object-center w-full h-full col-start-7 col-end-13 row-end-7 xl:size-[32rem] md:row-start-4 md:block follow-mouse"
+        class="z-10 hidden object-cover object-center col-start-7 col-end-13 row-end-7 xl:w-[450px] md:row-start-4 md:block follow-mouse"
         src="./assets/images/landing-page/macBook-Air.webp"
         alt="laptop macBook-Air"
         loading="lazy"
       />
       <img
-        class="hidden col-start-7 self-baseline w-28 lg:row-end-auto lg:row-start-7 md:row-start-5 md:row-end-6 md:block follow-mouse"
+        class="hidden col-start-7 xl:col-start-6 self-baseline w-28 lg:row-end-auto lg:row-start-6 lg:self-end xl:row-start-6 md:row-start-5 md:row-end-6 md:block follow-mouse"
         src="./assets/images/landing-page/iphone.webp"
         alt="iphone 15"
         loading="lazy"
@@ -237,9 +237,9 @@
     <!-- landing page ends -->
 
     <!-- carousel starts -->
-    <section class="container px-4 mx-auto">
+    <section class="container px-4 mx-auto xl:mt-32">
       <div class="flex flex-col w-full md:justify-between">
-        <h1 class="mb-3 text-5xl font-bold uppercase md:text-6xl">
+        <h1 class="mb-16 text-5xl font-bold uppercase md:text-6xl">
           nous service
         </h1>
       </div>
@@ -858,27 +858,27 @@
           Nous transformons les appareils de cassés à brillants
         </h1>
 
-        <div class="grid gap-6 md:grid-cols-2">
+        <div class="grid gap-6 md:grid-cols-2 counters">
           <div class="">
             <h1 class="mb-5 text-4xl font-bold">
-              <span id="manage">13</span>
+              <span data-count="13">0</span>
             </h1>
             <p class="text-neutral-500">
               Years of Expertise in Device Repair, I Deliver Unmatched Quality
               and Reliability
             </p>
           </div>
-          <div class="">
+          <div>
             <h1 class="mb-5 text-4xl font-bold lg:text-4xl">
-              <span id="manage">4.8</span>
+              <span data-count="5">0</span>
             </h1>
             <p class="text-neutral-500">
               Our average rating on Google reviews from clients
             </p>
           </div>
-          <div class="grid-cols-subgrid">
+          <div>
             <h1 class="mb-5 text-4xl font-bold lg:text-4xl">
-              <span id="manage">100.00</span>
+              <span data-count="100,00">0</span>
             </h1>
             <p class="text-neutral-500">
               Offrant la satisfaction clientèle avec chaque appareil réparé
