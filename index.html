@@ -9,6 +9,10 @@
     />
 
     <link rel="stylesheet" href="./assets/src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/all.min.css" />
 
     <title>home</title>
@@ -122,7 +126,7 @@
 
     <!-- landing page starts -->
     <main
-      class="container grid-wrapper gap-x-12 xl:mt-48 px-4 items-center h-[90dvh] 2xl:h-[60dvh] mx-auto"
+      class="container grid-wrapper xl:mt-48 px-4 items-center h-[90dvh] 2xl:h-[60dvh] mx-auto"
       id="main-container"
     >
       <div
@@ -237,272 +241,172 @@
     <!-- landing page ends -->
 
     <!-- carousel starts -->
-    <section class="container px-4 mx-auto xl:mt-32">
-      <div class="flex flex-col w-full md:justify-between">
-        <h1 class="mb-16 text-5xl font-bold uppercase md:text-6xl">
-          nous service
-        </h1>
-      </div>
-
-      <div
-        class="relative flex items-center w-full h-[70dvh] xl:h-[40dvh] gap-5 overflow-hidden"
-      >
-        <div
-          class="absolute z-0 grid items-stretch w-full h-full grid-cols-1 overflow-hidden bg-white slide md:grid-cols-2"
-        >
-          <div class="flex items-center overflow-hidden size-full">
-            <img
-              src="/assets/images/landing-page/macBook-Air.webp"
-              class="object-contain object-center picture size-full"
-              alt=""
-            />
-          </div>
-          <div
-            class="grid items-center content-center grid-flow-row-dense gap-9"
-          >
-            <div class="flex flex-col gap-10">
-              <h1 class="text-5xl font-bold uppercase md:text-6xl">laptop</h1>
-              <p class="mb-5 text-justify text-neutral-500 xl:w-1/2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Facilis, illum incidunt temporibus quia blanditiis ipsum
-                quibusdam, dolore error dignissimos quidem sunt repellendus
-                dicta odit tium tempore deserunt illum omnis, similique qui aut.
-                Ullam, alias.
-              </p>
-            </div>
-
-            <button class="btn xl:w-fit">
-              <span> rapair my laptop </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="absolute z-0 grid items-stretch w-full h-full grid-cols-1 overflow-hidden bg-white slide md:grid-cols-2"
-        >
-          <div
-            class="flex items-center justify-center overflow-hidden size-full"
-          >
-            <img
-              src="/assets/images/landing-page/iphone.webp"
-              class="object-contain object-center w-56 picture h-96"
-              alt=""
-            />
-          </div>
-          <div
-            class="grid items-center content-center grid-flow-row-dense gap-9"
-          >
-            <div class="flex flex-col gap-10">
-              <h1 class="text-5xl font-bold uppercase md:text-6xl">IPHONE</h1>
-              <p class="mb-5 text-justify text-neutral-500 xl:w-1/2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Facilis, illum incidunt temporibus quia blanditiis ipsum
-                quibusdam, dolore error dignissimos quidem sunt repellendus
-                dicta odit tium tempore deserunt illum omnis, similique qui aut.
-                Ullam, alias.
-              </p>
-            </div>
-
-            <button class="btn xl:w-fit">
-              <span> rapair my Iphone </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="absolute z-0 grid items-stretch w-full h-full grid-cols-1 overflow-hidden bg-white slide md:grid-cols-2"
-        >
-          <div class="flex items-center overflow-hidden size-full">
-            <img
-              src="/assets/images/landing-page/IPAD PRO.webp"
-              class="object-contain object-center picture size-full"
-              alt=""
-            />
-          </div>
-          <div
-            class="grid items-center content-center grid-flow-row-dense gap-9"
-          >
-            <div class="flex flex-col gap-10">
-              <h1 class="text-5xl font-bold uppercase md:text-6xl">ipad</h1>
-              <p class="mb-5 text-justify text-neutral-500 xl:w-1/2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Facilis, illum incidunt temporibus quia blanditiis ipsum
-                quibusdam, dolore error dignissimos quidem sunt repellendus
-                dicta odit tium tempore deserunt illum omnis, similique qui aut.
-                Ullam, alias.
-              </p>
-            </div>
-
-            <button class="btn xl:w-fit">
-              <span> rapair my ipad </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="absolute z-0 grid items-stretch w-full h-full grid-cols-1 overflow-hidden bg-white slide md:grid-cols-2"
-        >
-          <div class="flex items-center overflow-hidden size-full">
-            <img
-              src="/assets/images/landing-page/macBook-Air.webp"
-              class="object-contain object-center picture size-full"
-              alt=""
-            />
-          </div>
-          <div
-            class="grid items-center content-center grid-flow-row-dense gap-9"
-          >
-            <div class="flex flex-col gap-10">
-              <h1 class="text-5xl font-bold uppercase md:text-6xl">laptop</h1>
-              <p class="mb-5 text-justify text-neutral-500 xl:w-1/2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Facilis, illum incidunt temporibus quia blanditiis ipsum
-                quibusdam, dolore error dignissimos quidem sunt repellendus
-                dicta odit tium tempore deserunt illum omnis, similique qui aut.
-                Ullam, alias.
-              </p>
-            </div>
-
-            <button class="btn xl:w-fit">
-              <span> rapair my laptop </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="absolute z-0 grid items-stretch w-full h-full grid-cols-1 overflow-hidden bg-white slide md:grid-cols-2"
-        >
-          <div class="flex items-center overflow-hidden size-full">
-            <img
-              src="/assets/images/landing-page/macBook-Air.webp"
-              class="object-contain object-center picture size-full"
-              alt=""
-            />
-          </div>
-          <div
-            class="grid items-center content-center grid-flow-row-dense gap-9"
-          >
-            <div class="flex flex-col gap-10">
-              <h1 class="text-5xl font-bold uppercase md:text-6xl">laptop</h1>
-              <p class="mb-5 text-justify text-neutral-500 xl:w-1/2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Facilis, illum incidunt temporibus quia blanditiis ipsum
-                quibusdam, dolore error dignissimos quidem sunt repellendus
-                dicta odit tium tempore deserunt illum omnis, similique qui aut.
-                Ullam, alias.
-              </p>
-            </div>
-
-            <button class="btn xl:w-fit">
-              <span> rapair my laptop </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </button>
-          </div>
+    <div
+      class="container mx-auto swiper-container"
+      role="region"
+      aria-label="Product Carousel"
+    >
+      <div>
+        <div class="flex flex-col w-full md:justify-between">
+          <h1 class="text-5xl font-bold uppercase md:text-6xl">nous service</h1>
         </div>
       </div>
-      <div
-        class="flex items-center justify-between gap-8 mt-4 md:mt-0 md:justify-end md:mx-auto"
-      >
-        <button
-          id="prevButton"
-          aria-label="bouton précédent"
-          class="text-center rotate-180 border rounded-lg border-neutral-600 hover:border-black w-fit"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="38"
-            height="38"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="m9 18 6-6-6-6" />
-          </svg>
-        </button>
-        <button
-          id="nextButton"
-          aria-label="bouton suivant"
-          class="text-center border rounded-lg border-neutral-600 hover:border-black w-fit"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="38"
-            height="38"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="m9 18 6-6-6-6" />
-          </svg>
-        </button>
+      <div class="py-40 swiper-wrapper">
+        <div class="items-center px-4 bg-white swiper-slide" lazy="true">
+          <div class="grid items-center grid-cols-1 gap-10 md:grid-cols-2">
+            <div>
+              <img
+                src="./assets/images/landing-page/iphone.webp"
+                class="h-48 mx-auto md:min-h-72"
+                loading="lazy"
+                alt="iPhone"
+              />
+            </div>
+            <div class="grid grid-flow-row-dense md:items-stretch gap-7">
+              <h2
+                class="items-stretch mb-8 text-4xl font-bold capitalize md:text-6xl md:self-end"
+              >
+                iPhone
+              </h2>
+              <p class="md:text-xl text-neutral-500 lg:w-9/12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                accusantium commodi debitis voluptates magnam repellat,
+                molestiae ex, minima rerum soluta fugit facere asperiores illo.
+              </p>
+              <button
+                class="md:self-start md:w-fit btn"
+                aria-label="Repair my iPhone"
+              >
+                Repair my iPhone
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="items-center px-4 bg-white swiper-slide" lazy="true">
+          <div class="grid items-center grid-cols-1 gap-10 md:grid-cols-2">
+            <div>
+              <img
+                src="./assets/images/landing-page/macBook-Air.webp"
+                class="h-48 mx-auto md:min-h-72"
+                loading="lazy"
+                alt="laptop"
+              />
+            </div>
+            <div class="grid grid-flow-row-dense md:items-stretch gap-7">
+              <h2
+                class="items-stretch mb-8 text-4xl font-bold capitalize md:text-6xl md:self-end"
+              >
+                laptop
+              </h2>
+              <p class="md:text-xl text-neutral-500 lg:w-9/12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                accusantium commodi debitis voluptates magnam repellat,
+                molestiae ex, minima rerum soluta fugit facere asperiores illo.
+              </p>
+              <button
+                class="md:self-start md:w-fit btn"
+                aria-label="Repair my laptop"
+              >
+                Repair my laptop
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="items-center px-4 bg-white swiper-slide" lazy="true">
+          <div class="grid items-center grid-cols-1 gap-10 md:grid-cols-2">
+            <div>
+              <img
+                src="./assets/images/landing-page/IPAD PRO.webp"
+                class="h-48 mx-auto md:min-h-72"
+                loading="lazy"
+                alt="laptop"
+              />
+            </div>
+            <div class="grid grid-flow-row-dense md:items-stretch gap-7">
+              <h2
+                class="items-stretch mb-8 text-4xl font-bold capitalize md:text-6xl md:self-end"
+              >
+                IPAD
+              </h2>
+              <p class="md:text-xl text-neutral-500 lg:w-9/12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                accusantium commodi debitis voluptates magnam repellat,
+                molestiae ex, minima rerum soluta fugit facere asperiores illo.
+              </p>
+              <button
+                class="md:self-start md:w-fit btn"
+                aria-label="Repair my IPAD"
+              >
+                Repair my IPAD
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="items-center px-4 bg-white swiper-slide" lazy="true">
+          <div class="grid items-center grid-cols-1 gap-10 md:grid-cols-2">
+            <div>
+              <img
+                src="./assets/images/landing-page/Controller-XL@2x.webp"
+                class="h-48 mx-auto rotate-[15deg] md:min-h-72"
+                loading="lazy"
+                alt="console"
+              />
+            </div>
+            <div class="grid grid-flow-row-dense md:items-stretch gap-7">
+              <h2
+                class="items-stretch mb-8 text-4xl font-bold capitalize md:text-6xl md:self-end"
+              >
+                console
+              </h2>
+              <p class="md:text-xl text-neutral-500 lg:w-9/12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                accusantium commodi debitis voluptates magnam repellat,
+                molestiae ex, minima rerum soluta fugit facere asperiores illo.
+              </p>
+              <button
+                class="md:self-start md:w-fit btn"
+                aria-label="Repair my console"
+              >
+                Repair my conosle
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="items-center px-4 bg-white swiper-slide" lazy="true">
+          <div class="grid items-center grid-cols-1 gap-10 md:grid-cols-2">
+            <div>
+              <img
+                src="./assets/images/landing-page/Controller-XL@2x.webp"
+                class="h-48 mx-auto rotate-[15deg] md:min-h-72"
+                loading="lazy"
+                alt="usb stick"
+              />
+            </div>
+            <div class="grid grid-flow-row-dense md:items-stretch gap-7">
+              <h2
+                class="items-stretch mb-8 text-4xl font-bold capitalize md:text-6xl md:self-end"
+              >
+                Data recovery
+              </h2>
+              <p class="md:text-xl text-neutral-500 lg:w-9/12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                accusantium commodi debitis voluptates magnam repellat,
+                molestiae ex, minima rerum soluta fugit facere asperiores illo.
+              </p>
+              <button
+                class="md:self-start md:w-fit btn"
+                aria-label="Repair my console"
+              >
+                recover my Data
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination" aria-hidden="true"></div>
+        <div class="swiper-button-next" aria-label="Next slide"></div>
+        <div class="swiper-button-prev" aria-label="Previous slide"></div>
       </div>
-    </section>
+    </div>
     <!-- carousel ends -->
     <!-- unique approche starts -->
     <main class="container px-4 py-3 mx-auto my-24">
@@ -858,10 +762,10 @@
           Nous transformons les appareils de cassés à brillants
         </h1>
 
-        <div class="grid gap-6 md:grid-cols-2 counters">
+        <div class="grid gap-6 md:grid-cols-2 counters" id="container">
           <div class="">
             <h1 class="mb-5 text-4xl font-bold">
-              <span data-count="13">0</span>
+              <span class="counter" data-count="13">0</span>
             </h1>
             <p class="text-neutral-500">
               Years of Expertise in Device Repair, I Deliver Unmatched Quality
@@ -870,7 +774,7 @@
           </div>
           <div>
             <h1 class="mb-5 text-4xl font-bold lg:text-4xl">
-              <span data-count="5">0</span>
+              <span class="counter" data-count="5">0</span>
             </h1>
             <p class="text-neutral-500">
               Our average rating on Google reviews from clients
@@ -878,7 +782,7 @@
           </div>
           <div>
             <h1 class="mb-5 text-4xl font-bold lg:text-4xl">
-              <span data-count="100,00">0</span>
+              <span class="counter" data-count="10000">0</span>
             </h1>
             <p class="text-neutral-500">
               Offrant la satisfaction clientèle avec chaque appareil réparé
@@ -975,10 +879,17 @@
 
     <!-- footer ends -->
     <!-- scripts starts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Counter-Up.js -->
+    <script src="https://cdn.jsdelivr.net/jquery.counterup/2.1.0/jquery.counterup.min.js"></script>
+    <!-- Waypoints.js (required by Counter-Up.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/swiper.js"></script>
     <script src="./assets/js/googleReviews.js"></script>
     <script src="./assets/js/main.js"></script>
     <!-- scripts ends -->

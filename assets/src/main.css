@@ -237,3 +237,15 @@
 .invalid-input {
   @apply border-2 border-red-500 hover:border-2 hover:border-red-500 focus-within:border-2 focus-within:border-red-500 focus:border-2 focus:border-red-500;
 }
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply text-black;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-fuchsia-300;
+}
+.swiper-pagination-bullet + .swiper-pagination-bullet-active {
+  @apply bg-fuchsia-800;
+}
