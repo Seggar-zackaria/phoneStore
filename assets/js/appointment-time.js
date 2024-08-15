@@ -1,109 +1,77 @@
-function setupCalendar() {
-  const today = new Date();
-  const calendarDays = Array.from(
-    { length: 6 },
-    (v, i) =>
-      new Date(today.getFullYear(), today.getMonth(), today.getDate() + i)
-  );
+document.addEventListener("DOMContentLoaded", function () {
+  const customerForm = document.getElementById("customer-details-form");
 
-  const calendarElement = document.querySelector("#calendar");
-  calendarElement.innerHTML = "";
+  // const swissPhoneRegex = /^\+41[1-9][0-9]{8}$/;
+  const swissPhoneRegex = /^[1-9]/;
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$/;
 
-  const options = { weekday: "long", day: "numeric", month: "long" };
+  const inputs = {
+    firstName: document.getElementById("first-name"),
+    lastName: document.getElementById("last-name"),
+    email: document.getElementById("email"),
+    phone: document.getElementById("phone"),
+  };
 
-  calendarDays.forEach((day) => {
-    const card = document.createElement("label");
-    card.className = "date-card";
-
-    const input = document.createElement("input");
-    input.type = "radio";
-    input.name = "calendarDate";
-    input.id = `date-${day.toDateString()}`;
-    input.value = day.toDateString();
-    input.className = "card-input-element";
-    input.style.display = "none";
-    input.setAttribute("readonly", "readonly");
-
-    card.appendChild(input);
-
-    const formattedDate = day.toLocaleDateString("fr-FR", options);
-    const parts = formattedDate.split(" ");
-    const customFormattedDate = `${parts[2]} ${parts[0]} ${parts[1]}`;
-    card.append(customFormattedDate);
-
-    if (day.toDateString() === today.toDateString()) {
-      const textNode = document.createTextNode(" Aujourd'hui");
-      const span = document.createElement("span");
-      span.classList.add("today");
-      span.appendChild(textNode);
-      card.appendChild(span);
+  function validateInput(input, regex) {
+    const errorElement = input.nextElementSibling;
+    if (!regex.test(input.value.trim())) {
+      errorElement.innerHTML = "Entrée invalide.";
+      input.classList.remove("valid-input");
+      input.classList.add("invalid-input");
+    } else {
+      errorElement.innerHTML = "";
+      input.classList.remove("invalid-input");
+      input.classList.add("valid-input");
     }
+  }
 
-    card.setAttribute("for", input.id);
-    calendarElement.appendChild(card);
+  function saveToLocalStorage(input) {
+    localStorage.setItem(input.id, input.value);
+  }
 
-    input.addEventListener("change", function () {
-      document.querySelectorAll(".date-card").forEach(function (card) {
-        card.style.border = "1px solid #ccc";
-      });
-      if (this.checked) {
-        card.style.border = "2px solid #86198f";
+  function loadFromLocalStorage(input) {
+    if (localStorage.getItem(input.id)) {
+      input.value = localStorage.getItem(input.id);
+      validateInput(input, eval(input.dataset.regex));
+    }
+  }
+
+  Object.keys(inputs).forEach((key) => {
+    const input = inputs[key];
+    input.dataset.regex =
+      key === "firstName" || key === "lastName"
+        ? "nameRegex"
+        : key === "email"
+        ? "emailRegex"
+        : "swissPhoneRegex";
+    input.addEventListener("input", () => {
+      validateInput(input, eval(input.dataset.regex));
+      saveToLocalStorage(input);
+    });
+    loadFromLocalStorage(input);
+  });
+
+  customerForm.addEventListener("submit", function (e) {
+    let isValid = true;
+    Object.keys(inputs).forEach((key) => {
+      const input = inputs[key];
+      if (!eval(input.dataset.regex).test(input.value.trim())) {
+        input.classList.add("invalid-input");
+        isValid = false;
+      } else {
+        input.classList.remove("invalid-input");
+        input.classList.add("valid-input");
       }
     });
+
+    if (!isValid) {
+      e.preventDefault();
+    } else {
+      Object.keys(inputs).forEach((key) => {
+        localStorage.removeItem(inputs[key].id);
+      });
+    }
   });
-}
-
-document.addEventListener("DOMContentLoaded", setupCalendar);
-setInterval(setupCalendar, 60000);
-
-// function setupTime() {
-//   const currentDate = new Date();
-//   const startHour = 11; // Start at 11 AM
-//   const endHour = 21; // End at 9 PM (21 in 24-hour format)
-//   const hoursRange = endHour - startHour;
-
-//   const appointmentTimes = Array.from(
-//     { length: hoursRange + 1 },
-//     (_, i) =>
-//       new Date(
-//         currentDate.getFullYear(),
-//         currentDate.getMonth(),
-//         currentDate.getDate(),
-//         startHour + i
-//       )
-//   );
-
-//   const timeElement = document.querySelector("#timeAppointment");
-//   timeElement.innerHTML = ""; // Clear previous entries
-
-//   appointmentTimes.forEach((time) => {
-//     const card = document.createElement("label");
-//     card.className = "date-card";
-
-//     const input = document.createElement("input");
-//     input.type = "radio";
-//     input.name = "calendarTime";
-//     input.id = `time-${time.getHours()}`;
-//     input.value = time.toISOString(); // Storing ISO string as value, useful for submission
-//     input.className = "card-input-element";
-//     input.style.display = "none"; // Keeping input hidden as per original design
-
-//     card.appendChild(input);
-//     // Display hour in 12-hour format with AM/PM
-//     card.append(
-//       time.toLocaleTimeString("en-US", { hour: "numeric", hour12: true })
-//     );
-
-//     // Set 'for' attribute for label to work properly with the hidden input
-//     card.setAttribute("for", input.id);
-
-//     input.addEventListener("change", function () {
-//       document.querySelectorAll(".date-card").forEach(function (card) {
-//         card.style.border = "1px solid #ccc"; // Reset borders for all cards
-//       });
-//       card.style.border = "2px solid #86198f"; // Highlight selected card
-//     });
-
-//     timeElement.appendChild(card);
-//   });
-// }
+});

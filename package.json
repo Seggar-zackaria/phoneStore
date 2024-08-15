@@ -9,5 +9,11 @@
   },
   "dependencies": {
     "dotenv": "^16.4.5"
-  }
+  },
+  "name": "phonestore",
+  "version": "1.0.0",
+  "description": "appointment services",
+  "main": "postcss.config.js",
+  "author": "",
+  "license": "ISC"
 }

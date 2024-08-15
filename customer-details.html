@@ -5,10 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/src/output.css" />
     <link rel="stylesheet" href="./assets/css/all.min.css" />
-    <title>home</title>
+    <title>Home</title>
   </head>
   <body>
-    <!-- navbar starts -->
+    <script>
+      let date = new Date();
+
+      function day(dayIndex) {
+        const days = [
+          "Dimanche",
+          "Lundi",
+          "Mardi",
+          "Mercredi",
+          "Jeudi",
+          "Vendredi",
+          "Samedi",
+        ];
+
+        return days[dayIndex];
+      }
+
+      function month(monthIndex) {
+        const months = [
+          "Janvier",
+          "Février",
+          "Mars",
+          "Avril",
+          "Mai",
+          "Juin",
+          "Juillet",
+          "Août",
+          "Septembre",
+          "Octobre",
+          "Novembre",
+          "Décembre",
+        ];
+
+        return months[monthIndex];
+      }
+
+      let calendarForm = document.getElementById("days");
+
+      if (calendarForm) {
+        for (let i = 1; i <= 6; i++) {
+          let d = new Date(date.getTime() + 86400000 * i);
+          let result = `${day(d.getDay())} ${d.getDate()} ${month(
+            d.getMonth()
+          )}`;
+
+          calendarForm.insertAdjacentHTML(
+            "beforeend",
+            `<label class="date-card">
+              <input type="radio" name="app-date" class="card-input-element" value="${d.getFullYear()}-${
+              d.getMonth() + 1
+            }-${d.getDate()}">
+              ${result}
+            </label>`
+          );
+        }
+      }
+    </script>
+
+    <!-- Navbar starts -->
     <header class="container relative mx-auto">
       <nav
         class="flex items-center justify-between px-4 py-3 border-b border-stone-300"
@@ -18,7 +76,7 @@
           <img
             class="w-28"
             src="./assets/images/logo/phonelab.svg"
-            alt="phonelab store logo"
+            alt="Phonelab Store Logo"
           />
         </div>
         <div class="hidden text-stone-400 lg:block">
@@ -26,26 +84,26 @@
             <li
               class="transition-all duration-200 hover:text-fuchsia-500 motion-reduce:ease-in-out"
             >
-              <a href="">service</a>
+              <a href="">Service</a>
             </li>
             <li
               class="transition-all duration-200 hover:text-fuchsia-500 motion-reduce:ease-in-out"
             >
-              <a href="">statistique</a>
+              <a href="">Statistique</a>
             </li>
             <li
               class="transition-all duration-200 hover:text-fuchsia-500 motion-reduce:ease-in-out"
             >
-              <a href="">temoignage</a>
+              <a href="">Témoignage</a>
             </li>
             <li
               class="transition-all duration-200 hover:text-fuchsia-500 motion-reduce:ease-in-out"
             >
-              <a href="">contact</a>
+              <a href="">Contact</a>
             </li>
           </ul>
         </div>
-        <!-- mobile menu -->
+        <!-- Mobile menu -->
         <div
           class="fixed inset-0 w-full z-50 opacity-0 bg-[#f8f7eb] menu-overlay rounded-lg"
         >
@@ -59,34 +117,38 @@
                 <a
                   href=""
                   class="inline-block text-4xl font-black tracking-widest translate-y-0 md:text-5xl menu-link text-neutral-500"
-                  >service</a
                 >
+                  Service
+                </a>
               </li>
               <li class="overflow-hidden w-fit">
                 <a
                   href=""
                   class="inline-block text-4xl font-black tracking-widest translate-y-0 md:text-5xl menu-link text-neutral-500"
-                  >statistique</a
                 >
+                  Statistique
+                </a>
               </li>
               <li class="overflow-hidden w-fit">
                 <a
                   href=""
                   class="inline-block text-4xl font-black tracking-widest translate-y-0 md:text-5xl menu-link text-neutral-500"
-                  >temoignage</a
                 >
+                  Témoignage
+                </a>
               </li>
               <li class="overflow-hidden w-fit">
                 <a
                   href=""
                   class="inline-block text-4xl font-black tracking-widest translate-y-0 md:text-5xl menu-link text-neutral-500"
-                  >contact</a
                 >
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
         </div>
-        <!-- toggle button  -->
+        <!-- Toggle button -->
         <div class="absolute z-50 -translate-y-1/2 right-2 top-1/2" id="burger">
           <button
             class="flex items-center gap-4 px-2 py-1 border-2 rounded-full text-stone-400 border-stone-300 lg:hidden"
@@ -111,175 +173,239 @@
         </div>
       </nav>
     </header>
-    <!-- navbar ends -->
-    <div
-      class="container grid items-center content-center h-screen px-4 mx-auto"
-    >
-      <div class="mb-10">
-        <h2 class="text-4xl capitalize">entrez votre contact</h2>
-      </div>
-      <form
-        action="/confirmation.html"
-        id="customer-details-form"
-        class="flex flex-col gap-6"
-        method="post"
-      >
-        <div class="flex flex-wrap gap-6 md:flex-nowrap">
-          <div class="w-full">
-            <input
-              class="w-full input-field"
-              type="text"
-              id="first-name"
-              value=""
-              autocomplete="name"
-              aria-live="polite"
-              aria-describedby="name-validation"
-              name="first-name"
-              placeholder="votre nom"
-              aria-label="votre nom"
-            />
-            <p class="error-massage"></p>
+    <!-- Navbar ends -->
+
+    <section class="container grid items-start px-4 mx-auto mt-16">
+      <div class="container mx-auto">
+        <div class="my-12">
+          <h1 class="text-4xl">Quand devons-nous vous attendre ?</h1>
+        </div>
+
+        <h2 class="mb-3 text-2xl text-neutral-500">Choisissez une date</h2>
+
+        <form action="" method="POST">
+          <div
+            id="days "
+            class="grid grid-cols-1 gap-3 mt-6 md:grid-cols-4"
+          ></div>
+
+          <h2 class="mb-3 text-2xl text-neutral-500">Choisissez l'heure</h2>
+
+          <div class="grid grid-cols-1 gap-3 mt-6 md:grid-cols-4">
+            <label>
+              <input type="radio" name="time" value="10am" class="time-input" />
+              <div class="time-card">
+                <span>10am - 11am</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="time" value="11am" class="time-input" />
+              <div class="time-card">
+                <span>11am - 12pm</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="time" value="12pm" class="time-input" />
+              <div class="time-card">
+                <span>12pm - 1pm</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="time" value="1pm" class="time-input" />
+              <div class="time-card">
+                <span>1pm - 2pm</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="time" value="2pm" class="time-input" />
+              <div class="time-card">
+                <span>2pm - 3pm</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="time" value="3pm" class="time-input" />
+              <div class="time-card">
+                <span>3pm - 4pm</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="time" value="4pm" class="time-input" />
+              <div class="time-card">
+                <span>4pm - 5pm</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="time" value="5pm" class="time-input" />
+              <div class="time-card">
+                <span>5pm - 6pm</span>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="time" value="6pm" class="time-input" />
+              <div class="time-card">
+                <span>6pm - 7pm</span>
+              </div>
+            </label>
           </div>
-          <div class="w-full">
-            <input
-              class="w-full input-field"
-              autocomplete="name"
-              aria-live="polite"
-              value=""
-              id="last-name"
-              type="text"
-              name="last-name"
-              placeholder="votre Prenom"
-              aria-label="votre prenom"
-            />
-            <p class="error-massage"></p>
-          </div>
-        </div>
-        <div>
-          <input
-            class="w-full input-field"
-            type="email"
-            id="email"
-            value=""
-            aria-live="polite"
-            name="email"
-            aria-label="votre adresse email"
-            autocomplete="email"
-            placeholder="adresse email"
-          />
-          <p class="error-massage"></p>
-        </div>
-        <div>
-          <input
-            class="w-full input-field"
-            type="number"
-            id="phone"
-            aria-live="polite"
-            name="phone"
-            autocomplete="tel-national"
-            value=""
-            maxlength="10"
-            inputmode="numeric"
-            aria-label="votre numero de telephone"
-            placeholder="votre numero pour vous contactez"
-          />
-          <p class="error-massage"></p>
-          <p class="mt-2 text-neutral-400">
-            Si votre téléphone ne fonctionne pas, vous pouvez utiliser un numéro
-            alternatif
-          </p>
-        </div>
-        <p class="mt-1">
-          En continuant, vous acceptez
-          <span
-            class="underline transition-colors ease-linear text-neutral-700 hover:text-neutral-400 underline-offset-4"
-            ><a
-              tabindex="-1"
-              href="./store-terms-condition.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >les conditions d'utilisation</a
-            ></span
+
+          <div
+            class="container grid items-center content-center gap-6 py-40 mx-auto"
           >
-          et la
-          <span
-            class="underline transition-colors ease-linear text-neutral-700 hover:text-neutral-400 underline-offset-4"
-            ><a
-              tabindex="-1"
-              href="./store-privacy-policy.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >politique de confidentialité</a
-            ></span
-          >.
-        </p>
-        <div
-          class="grid items-center w-full gap-6 my-7 md:justify-items-center md:grid-cols-2"
-        >
-          <a tabindex="-1" class="btn lg:w-fit" href="./damage-type.html">
-            <button class="flex">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="rotate-180"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                aria-hidden="true"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+            <div class="mb-10">
+              <h2 class="text-4xl capitalize">Entrez votre contact</h2>
+            </div>
+
+            <div class="flex flex-wrap gap-6 md:flex-nowrap">
+              <div class="w-full">
+                <input
+                  class="w-full input-field"
+                  type="text"
+                  id="first_name"
+                  autocomplete="given-name"
+                  name="first_name"
+                  placeholder="Votre nom"
+                  aria-label="Votre nom"
+                />
+                <p class="error-message"></p>
+              </div>
+              <div class="w-full">
+                <input
+                  class="w-full input-field"
+                  type="text"
+                  id="last-name"
+                  autocomplete="family-name"
+                  name="last_name"
+                  placeholder="Votre prénom"
+                  aria-label="Votre prénom"
+                />
+                <p class="error-message"></p>
+              </div>
+            </div>
+            <div>
+              <input
+                class="w-full input-field"
+                type="email"
+                id="email"
+                name="email"
+                aria-label="Votre adresse email"
+                autocomplete="email"
+                placeholder="Adresse email"
+              />
+              <p class="error-message"></p>
+            </div>
+            <div>
+              <input
+                class="w-full input-field"
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                maxlength="10"
+                inputmode="numeric"
+                aria-label="Votre numéro de téléphone"
+                placeholder="Votre numéro pour vous contacter"
+              />
+              <p class="error-message"></p>
+              <p class="mt-2 text-neutral-400">
+                Si votre téléphone ne fonctionne pas, vous pouvez utiliser un
+                numéro alternatif.
+              </p>
+            </div>
+            <p class="mt-1">
+              En continuant, vous acceptez
+              <span
+                class="underline transition-colors ease-linear text-neutral-700 hover:text-neutral-400 underline-offset-4"
               >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-              <span> previous </span>
-            </button>
-          </a>
-          <a href="" tabindex="-1" class="btn lg:w-fit">
-            <button class="flex">
-              <span> continuer </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                <a
+                  href="./store-terms-condition.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  les conditions d'utilisation
+                </a>
+              </span>
+              et la
+              <span
+                class="underline transition-colors ease-linear text-neutral-700 hover:text-neutral-400 underline-offset-4"
               >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </button>
-          </a>
-        </div>
-      </form>
-    </div>
-    <!-- footer starts -->
+                <a
+                  href="./store-privacy-policy.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  politique de confidentialité
+                </a> </span
+              >.
+            </p>
+            <div
+              class="grid items-center w-full gap-6 my-7 md:justify-items-center md:grid-cols-2"
+            >
+              <a class="btn lg:w-fit" href="./damage-type.html">
+                <button class="flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="rotate-180"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                  <span> Précédent </span>
+                </button>
+              </a>
+              <a href="" class="btn lg:w-fit">
+                <button class="flex">
+                  <span> Envoyer </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Footer starts -->
     <footer
       class="container grid items-center justify-between w-full grid-cols-1 gap-8 px-4 py-8 mx-auto border-t mt-7 md:grid-cols-3 justify-items-center border-neutral-500 md:p-6"
     >
       <div class="uppercase text-neutral-500">
-        2024 &copy; <span class="text-neutral-900">phonelab</span>
+        2024 &copy; <span class="text-neutral-900">Phonelab</span>
       </div>
       <div class="-order-1 md:order-none">
         <img
           src="./assets/images/logo/phonelab.svg"
           class="w-20 h-fit"
           aria-hidden="false"
-          title="logo de phonelab Store"
-          alt="phonelab store"
+          title="Logo de Phonelab Store"
+          alt="Phonelab Store"
         />
-        <span class="sr-only">phonelabstore logo</span>
+        <span class="sr-only">Phonelab Store Logo</span>
       </div>
       <div class="space-x-3">
         <button type="submit">
-          <a href=""
-            ><svg
+          <a href="">
+            <svg
               class="text-blue-700 size-6"
-              title="suiver nous sur facebook"
+              title="Suivez-nous sur Facebook"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
               role="img"
@@ -296,7 +422,7 @@
             <svg
               class="text-blue-700 size-6"
               aria-hidden="true"
-              title="suiver nous sur tiktok"
+              title="Suivez-nous sur TikTok"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -308,11 +434,11 @@
           </a>
         </button>
         <button>
-          <a href=""
-            ><svg
+          <a href="">
+            <svg
               class="text-blue-700 size-6"
               aria-hidden="true"
-              title="contacter nous sur whatsapp"
+              title="Contactez-nous sur WhatsApp"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -323,11 +449,11 @@
           ></a>
         </button>
         <button>
-          <a href=""
-            ><svg
+          <a href="">
+            <svg
               aria-hidden="true"
               role="img"
-              title="suiver nous sur instagram"
+              title="Suivez-nous sur Instagram"
               class="text-blue-700 size-6"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -339,16 +465,17 @@
         </button>
       </div>
     </footer>
+    <!-- Footer ends -->
 
-    <!-- footer ends -->
-
-    <!-- scripts starts -->
+    <!-- Scripts starts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="./assets/js/all.min.js"></script>
     <script src="./assets/js/googleReviews.js"></script>
     <script src="./assets/js/forms-validation.js"></script>
     <script src="./assets/js/main.js"></script>
-    <!-- scripts ends -->
+    <!-- Scripts ends -->
   </body>
 </html>
+
+darkhavest666 Pachiepie1

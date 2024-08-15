@@ -67,126 +67,6 @@ function animateToggle() {
 }
 burger.addEventListener("click", animateToggle);
 
-// GSAP Carousel //
-document.addEventListener("DOMContentLoaded", function () {
-  const targets = document.querySelectorAll(".slide");
-  const pictures = document.querySelectorAll(".picture");
-  const nextButton = document.getElementById("nextButton");
-  const prevButton = document.getElementById("prevButton");
-  let count = 0;
-  let isAnimating = false;
-
-  // Set initial positions and opacity for slides and pictures
-  gsap.set(targets, { xPercent: (i) => (i === 0 ? 0 : 100), opacity: 0 });
-  gsap.set(targets, { opacity: 1 }); // Only the first slide is visible
-  gsap.set(pictures, { opacity: 0 });
-  gsap.to(pictures[0], { opacity: 1, duration: 1 });
-
-  // Function for next slide transition
-  function slideNext() {
-    if (isAnimating) return;
-    isAnimating = true;
-    const nextIndex = (count + 1) % targets.length;
-
-    // Animate out the current slide and picture
-    gsap.to(targets[count], {
-      duration: 1.2,
-      xPercent: -100,
-      ease: "power2.inOut",
-    });
-    gsap.to(pictures[count], {
-      duration: 1.2,
-      opacity: 0,
-      ease: "power2.inOut",
-    });
-
-    // Animate in the next slide and picture
-    gsap.fromTo(
-      targets[nextIndex],
-      {
-        xPercent: 100,
-        zIndex: 2,
-      },
-      {
-        duration: 1.2,
-        xPercent: 0,
-        zIndex: 2,
-        ease: "power2.inOut",
-        onComplete: () => {
-          isAnimating = false;
-          targets[count].style.zIndex = 0;
-          count = nextIndex;
-        },
-      }
-    );
-    gsap.fromTo(
-      pictures[nextIndex],
-      {
-        opacity: 0,
-      },
-      {
-        duration: 1.2,
-        opacity: 1,
-        ease: "power2.inOut",
-      }
-    );
-  }
-
-  // Function for previous slide transition
-  function slidePrev() {
-    if (isAnimating) return;
-    isAnimating = true;
-    const prevIndex = count - 1 < 0 ? targets.length - 1 : count - 1;
-
-    // Animate out the current slide and picture
-    gsap.to(targets[count], {
-      duration: 1.2,
-      xPercent: 100,
-      ease: "power2.inOut",
-    });
-    gsap.to(pictures[count], {
-      duration: 1.2,
-      opacity: 0,
-      ease: "power2.inOut",
-    });
-
-    // Animate in the previous slide and picture
-    gsap.fromTo(
-      targets[prevIndex],
-      {
-        xPercent: -100,
-        zIndex: 2,
-      },
-      {
-        duration: 1.2,
-        xPercent: 0,
-        zIndex: 2,
-        ease: "power2.inOut",
-        onComplete: () => {
-          isAnimating = false;
-          targets[count].style.zIndex = 0;
-          count = prevIndex;
-        },
-      }
-    );
-    gsap.fromTo(
-      pictures[prevIndex],
-      {
-        opacity: 0,
-      },
-      {
-        duration: 1.2,
-        opacity: 1,
-        ease: "power2.inOut",
-      }
-    );
-  }
-
-  // Event listeners for next and previous buttons
-  nextButton.addEventListener("click", slideNext);
-  prevButton.addEventListener("click", slidePrev);
-});
-
 // landing page pictures animation mousemove
 document.addEventListener("DOMContentLoaded", () => {
   const mainContainer = document.getElementById("main-container");
@@ -246,3 +126,26 @@ $(document).ready(function () {
     }
   });
 });
+
+function Marquee(selector, speed) {
+  const parentSelector = document.querySelector(selector);
+  const clone = parentSelector.innerHTML;
+  const firstElement = parentSelector.children[0];
+  let i = 0;
+  console.log(firstElement);
+  parentSelector.insertAdjacentHTML("beforeend", clone);
+  parentSelector.insertAdjacentHTML("beforeend", clone);
+
+  setInterval(function () {
+    firstElement.style.marginLeft = `-${i}px`;
+    if (i > firstElement.clientWidth) {
+      i = 0;
+    }
+    i = i + speed;
+  }, 0);
+}
+
+//after window is completed load
+//1 class selector for marquee
+//2 marquee speed 0.2
+window.addEventListener("load", Marquee(".marquee", 0.2));

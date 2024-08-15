@@ -32,3 +32,30 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".swiper-testimonials", {
+    // Optional parameters
+    effect: "cards",
+    grabCursor: true,
+    speed: 500,
+    rotate: true,
+
+    allowTouchMove: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+});
