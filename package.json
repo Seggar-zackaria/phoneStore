@@ -1,19 +1,23 @@
 {
   "devDependencies": {
     "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.4"
+    "postcss": "^8.4.38"
   },
   "scripts": {
     "dev": "tailwindcss -i ./assets/src/main.css -o ./assets/src/output.css --watch"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "tailwindcss": "^3.4.10"
   },
   "name": "phonestore",
   "version": "1.0.0",
   "description": "appointment services",
   "main": "postcss.config.js",
-  "author": "",
-  "license": "ISC"
+  "author": "seggar zackaria & kaci oussama",
+  "license": "ISC",
+  "keywords": [
+    "portfolio",
+    "agency"
+  ]
 }
