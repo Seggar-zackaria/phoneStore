@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -929,24 +929,12 @@ html {
   right: 0.5rem;
 }
 
-.right-\[10\%\] {
-  right: 10%;
-}
-
 .top-1\/2 {
   top: 50%;
 }
 
-.top-\[35\%\] {
-  top: 35%;
-}
-
 .-z-50 {
   z-index: -50;
-}
-
-.z-10 {
-  z-index: 10;
 }
 
 .z-20 {
@@ -1030,6 +1018,11 @@ html {
   margin-bottom: 9rem;
 }
 
+.my-48 {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -1088,12 +1081,12 @@ html {
   margin-top: 6rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.mt-28 {
+  margin-top: 7rem;
 }
 
-.mt-48 {
-  margin-top: 12rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-6 {
@@ -1145,11 +1138,6 @@ html {
 .size-6 {
   width: 1.5rem;
   height: 1.5rem;
-}
-
-.size-64 {
-  width: 16rem;
-  height: 16rem;
 }
 
 .size-fit {
@@ -1345,6 +1333,10 @@ html {
   gap: 1rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
 }
@@ -1363,12 +1355,6 @@ html {
 
 .gap-y-6 {
   row-gap: 1.5rem;
-}
-
-.-space-x-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(-0.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(-0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .-space-x-1\.5 > :not([hidden]) ~ :not([hidden]) {
@@ -1448,6 +1434,11 @@ html {
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-neutral-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(163 163 163 / var(--tw-border-opacity));
 }
 
 .border-neutral-500 {
@@ -1541,6 +1532,10 @@ html {
   padding: 0.5rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -1568,6 +1563,11 @@ html {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .py-3 {
@@ -1743,10 +1743,6 @@ html {
   opacity: 0;
 }
 
-.opacity-20 {
-  opacity: 0.2;
-}
-
 .ring-2 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -1756,11 +1752,6 @@ html {
 .ring-white {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
-}
-
-.blur-3xl {
-  --tw-blur: blur(64px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-all {
@@ -2074,6 +2065,14 @@ html {
     width: fit-content;
   }
 
+  .md\:w-52 {
+    width: 13rem;
+  }
+
+  .md\:w-44 {
+    width: 11rem;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2320,10 +2319,6 @@ html {
     margin-top: 12rem;
   }
 
-  .xl\:hidden {
-    display: none;
-  }
-
   .xl\:size-10\/12 {
     width: 83.333333%;
     height: 83.333333%;
@@ -2333,7 +2328,27 @@ html {
     width: 75%;
   }
 
+  .xl\:w-\[3rem\] {
+    width: 3rem;
+  }
+
+  .xl\:\!w-\[3rem\] {
+    width: 3rem !important;
+  }
+
+  .xl\:\!w-\[8rem\] {
+    width: 8rem !important;
+  }
+
+  .xl\:\!w-\[10rem\] {
+    width: 10rem !important;
+  }
+
   .xl\:w-\[13rem\] {
+    width: 13rem;
+  }
+
+  .xl\:w-52 {
     width: 13rem;
   }
 
